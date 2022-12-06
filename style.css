@@ -1,0 +1,168 @@
+
+*{
+    box-sizing: border-box;
+    font-size: 1.5rem;
+}
+
+body{
+    margin: 0;
+}
+
+.wrapper{
+    padding: 1rem;
+    height: 50vh; 
+    /* showing the wrapper into grid */
+    display: grid;
+    gap: 5px;
+    
+
+    grid-template-areas: 
+    "header header header"
+    "h1 h1 h1"
+    "banner banner side-box1"
+    "banner banner side-box2"
+    "side-menu main main"
+    "tags main main"
+    "recent main main"
+    "footer footer footer"
+   ;
+
+}
+/* you could do >div but inside wrapper not all are div */
+.wrapper> *{
+    padding: 2rem;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
+
+
+.header{
+    background: green;
+    padding:5px;
+    
+    
+    grid-area: header;
+    
+}
+
+h1{
+    background: gold;
+    
+    padding: 10px;
+    grid-area: h1;
+
+
+}
+.banner{
+    background: radial-gradient(blue ,yellow, red);
+    min-height:30vh;
+    grid-area: banner;
+    
+}
+.side-box1{
+    background: rgb(57, 140, 57);
+    grid-area: side-box1;
+}
+
+.side-box2{
+    background: purple;
+    grid-area: side-box2;
+}
+
+.side-menu{
+    background: rgb(245, 75, 75);
+    grid-area: side-menu;
+}
+
+.tags{
+    background-color:rgb(170, 112, 91) ;
+    grid-area: tags;
+}
+
+.recent{
+    background: rgb(231, 231, 58);
+    grid-area: recent;
+}
+
+.main{
+    background:linear-gradient( to right, red,blue,yellow);
+    min-height: 400px;
+    grid-area: main;
+    
+
+}
+
+.footer{
+    background:rgb(17, 246, 216);
+    grid-area: footer;
+
+}
+
+
+/* media query */
+
+/* /* max width 1000px ipad  */
+
+@media(max-width:1000px){
+
+    .wrapper{
+        
+        
+        /* showing the wrapper into grid */
+        display: grid;
+        gap: 5px;
+        
+        grid-template-areas: 
+        "header header"
+        "h1 h1 "
+        "banner banner "
+        "banner banner "
+        "side-box1 side-box2"
+        "side-menu side-menu"
+        " main main"
+        " tags recent"
+        "footer footer"
+       ;
+    
+    }
+
+}
+
+
+
+
+
+
+
+/* max width 768px  mobile  */
+
+@media(max-width:768px){
+
+    .wrapper{
+        
+        
+        /* showing the wrapper into grid */
+        display: grid;
+        gap: 5px;
+        
+        grid-template-areas: 
+        "header "
+        "h1  "
+        "banner "
+        "banner "
+        "side-box1"
+        "side-box2"
+
+        "side-menu "
+        " main "
+        " tags"
+        "recent"
+        "footer"
+       ;
+    
+    }
+}
